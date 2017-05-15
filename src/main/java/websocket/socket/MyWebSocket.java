@@ -2,12 +2,14 @@ package websocket.socket;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
-import websocket.config.CommonConstant;
+
+import org.springframework.web.socket.server.standard.SpringConfigurator;
 import websocket.entity.Friend;
 import websocket.entity.User;
-import websocket.model.Message;
-import websocket.model.TalkMessage;
 import websocket.service.LoginInfoService;
 import websocket.service.ServiceBean;
 import websocket.util.BeanUtils;
@@ -18,7 +20,6 @@ import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,8 +31,8 @@ import java.util.concurrent.CopyOnWriteArraySet;
  * @version 1.0, 2017/4/24
  * @description
  */
+@ComponentScan
 @ServerEndpoint(value = "/websocket")
-@Component
 public class MyWebSocket {
 
     LoginInfoService loginInfoService;
