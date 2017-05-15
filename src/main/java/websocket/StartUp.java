@@ -1,6 +1,8 @@
 package websocket;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 //import org.springframework.boot.autoconfigure.SpringBootApplication;
 //import org.springframework.cache.annotation.EnableCaching;
 
@@ -9,8 +11,8 @@ import org.springframework.boot.SpringApplication;
  * @version 1.0, 2017/4/24
  * @description
  */
-//@SpringBootApplication
-//@EnableCaching
+@SpringBootApplication
+@EnableCaching
 public class StartUp {
 
     public static void main(String[] args) throws Exception {
