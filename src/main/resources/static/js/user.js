@@ -27,7 +27,7 @@ $(function () {
         var id = $("#loginEmail").val();
         var password = $("#loginPassword").val();
         $.ajax({
-            url:'http://localhost:8080/check',
+            url:'http://localhost:8080/talk/check',
             method :'POST',
             dataType:'json',
             data:{id:id,password:password},
@@ -43,7 +43,7 @@ $(function () {
                     userid = value;
                 }
             }
-            window.location = "http://localhost:8080/success?token="+token+"&&userid="+userid;
+            window.location = "http://localhost:8080/talk/success?token="+token+"&&userid="+userid;
         });
     });
 

@@ -8,7 +8,7 @@ $(function () {
 
         //判断当前浏览器是否支持WebSocket
         if('WebSocket' in window){
-            websocket = new WebSocket("ws://localhost:8080/websocket?token="+token);
+            websocket = new WebSocket("ws://localhost:8080/talk/websocket?token="+token);
         }
         else{
             console.log('Not support websocket');

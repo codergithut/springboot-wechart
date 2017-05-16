@@ -208,7 +208,7 @@ $(function () {
             console.log(data);
              $.each(data.Data,function () {
                  var list = chat.view.friendList.clone();
-                 var img = "../img/user/" + this.image;
+                 var img = "talk/../img/user/" + this.image;
                  list.find(".chat-content-friends-icon > img").attr("src",img).end()
                      .find(".chat-content-friends-name > span").text(this.friendname).end()
                      .data({
@@ -248,7 +248,7 @@ $(function () {
          }else if (data.type == "userinfo") {
          //得到用户信息
               var data = data.Data;
-              var img = "../img/user/" +data.image;
+              var img = "talk/../img/user/" +data.image;
               chat.user.id = data.userid;
               chat.user.name = data.name;
               chat.user.img = img;

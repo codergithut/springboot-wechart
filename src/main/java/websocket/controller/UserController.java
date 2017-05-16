@@ -19,7 +19,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -67,7 +66,6 @@ public class UserController {
         loginInfo.setUserid(user.getUserid());
         loginInfoService.save(loginInfo);
         userService.updateUser(user);
-
         data.put("userid",user.getUserid());
         data.put("token", tokenResult);
         System.out.println(tokenResult);
@@ -76,7 +74,6 @@ public class UserController {
 
     @RequestMapping(value = "/success", method= RequestMethod.GET)
     public ModelAndView success(String token, String userid, HttpServletRequest request) throws Exception {
-
         Map<String,Object> model = new HashMap<String,Object>();
         model.put("token", token);
         model.put("userid", userid);
