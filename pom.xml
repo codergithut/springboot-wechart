@@ -117,6 +117,10 @@
 
     </dependencies>
 
+    <build>
+        <finalName>talk</finalName>
+    </build>
+
     <!--<build>-->
         <!--<plugins>-->
             <!--<plugin>-->
