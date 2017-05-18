@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="websocket.mybaits.mapper.FriendMapper">
+
+    <select id="selectById" resultType="websocket.entity.Friend">
+        select * from friends where id = #{id}
+    </select>
+
+    <insert id="insertFriend" parameterType="websocket.entity.Friend" >
+        insert into friends (id,userid,friend,friendname,relation,image,remark,address,tag)
+        values (#{id},#{userid},#{friend},#{friendname},#{relation},#{image},#{remark},#{address},#{tag})
+    </insert>
+
+    <update id="updateFriend"  parameterType="websocket.entity.Friend">
+        update friends SET userid=#{userid}, friend=#{friend},friendname=#{friendname},
+        relation=#{relation},image=#{image},remark=#{remark},address=#{address},tag=#{tag}
+        where id=#{id}
+    </update>
+
+
+    <select id="selectByUserId" resultType="websocket.entity.Friend">
+        select * from friends where userid = #{userid}
+    </select>
+
+</mapper>

@@ -42,7 +42,7 @@ public class MyBatisConfig implements TransactionManagementConfigurer {
         DruidDataSource dataSource1 = new DruidDataSource();
         dataSource1.setPassword("root");
         dataSource1.setUsername("root");
-        dataSource1.setUrl("jdbc:mysql://localhost:3306/mysql");
+        dataSource1.setUrl("jdbc:mysql://localhost:3306/mysql?useUnicode=true&characterEncoding=utf8");
         dataSource1.setDriverClassName("com.mysql.jdbc.Driver");
         return dataSource1;
     }
